@@ -22,8 +22,16 @@ const Header = () => {
           className="btn-toggle-dark-mode"
           onClick={toggleDarkMode}
         >
-          <FontAwesomeIcon className="far fa-moon" icon={faMoonDark} />
-          <FontAwesomeIcon className="fas fa-moon" icon={faMoonLignt} />
+          <FontAwesomeIcon
+            className="far fa-moon"
+            icon={faMoonDark}
+            style={{ marginRight: "1rem" }}
+          />
+          <FontAwesomeIcon
+            className="fas fa-moon"
+            icon={faMoonLignt}
+            style={{ marginRight: "1rem" }}
+          />
           Dark mode
         </button>
       </div>

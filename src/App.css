@@ -1,6 +1,10 @@
-/* Généralités */
+/* Estilos Generales */
 * {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
 }
 
 :root {
@@ -17,7 +21,7 @@ a:visited {
 }
 
 body {
-  font-family: "Nanito sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: hsl(200, 15%, 8%);
   background-color: var(--body);
   margin: 0;
@@ -34,12 +38,12 @@ img {
 }
 
 .container {
-  max-width: 1550px;
+  max-width: 97rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 30px;
+  padding: 1.9rem;
   position: relative;
   margin: auto;
 }

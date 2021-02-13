@@ -1,10 +1,10 @@
-.container.countries {
+.container .countries {
   justify-content: center;
   margin-top: -40px;
 }
 
 /* Loader */
-.lds-ring {
+/* .lds-ring {
   display: block;
   position: relative;
   width: 80px;
@@ -49,4 +49,4 @@
 
 body.dark .lds-ring div {
   border-color: hsl(209, 23%, 22%) transparent transparent transparent;
-}
+} */

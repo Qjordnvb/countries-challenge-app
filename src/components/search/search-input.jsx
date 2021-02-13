@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import IconSearch from "../../assets/img/search-solid.svg";
 
 const SearchInput = () => {
   // State to manage the value of the input
@@ -23,15 +26,22 @@ const SearchInput = () => {
   };
 
   return (
-    <input
-      className="search"
-      type="text"
-      placeholder="Search for a country"
-      value={value}
-      onChange={(event) => {
-        handleChangeValue(event.target.value);
-      }}
-    />
+    <div className="container-search">
+      <FontAwesomeIcon
+        class="icon-search"
+        icon={faSearch}
+        style={{ color: "inherit" }}
+      />
+      <input
+        className="search"
+        type="text"
+        placeholder="Search for a country"
+        value={value}
+        onChange={(event) => {
+          handleChangeValue(event.target.value);
+        }}
+      />
+    </div>
   );
 };
 
