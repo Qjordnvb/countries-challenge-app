@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+// services
+import { filterCountries } from "../../services/logic.service";
 
 const SearchDropdown = () => {
   // State to manage the visibility of dropdown menu
@@ -9,18 +11,6 @@ const SearchDropdown = () => {
   // Method to toggle the dropdown
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
-  };
-
-  // Method to filter countries by region
-  const filterCountries = (value) => {
-    const regionName = document.querySelectorAll(".country-region");
-    regionName.forEach((region) => {
-      if (region.innerText.includes(value) || value === "All") {
-        region.parentElement.parentElement.style.display = "block";
-      } else {
-        region.parentElement.parentElement.style.display = "none";
-      }
-    });
   };
 
   return (

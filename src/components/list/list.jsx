@@ -1,23 +1,25 @@
 import React, { useState, useEffect } from "react";
+// components
 import Item from "../item/item";
+// services
+import { findAllCountries } from "../../services/api.service";
+// styles
 import "./list.css";
 
 const List = () => {
-  // State to store countries
-  const [countries, setcountries] = useState([]);
+  // estado para manejar los paises
+  const [countries, setCountries] = useState([]);
 
-  // State to mange the loading spinner
+  // estado para el loading
   const [loading, setLoading] = useState(true);
 
-  // Effect to fetch countries from the API
+  // fetch a la api de rest countries
   useEffect(() => {
-    fetch("https://restcountries.eu/rest/v2/all")
-      .then((response) => response.json())
-      .then((countriesList) => {
-        setcountries(countriesList);
-        setLoading(false);
-      })
-      .catch((error) => console.log(error));
+    async function findCountries() {
+      setCountries(await findAllCountries());
+      setLoading(false);
+    }
+    findCountries();
   }, [loading]);
 
   return loading ? (
@@ -28,7 +30,7 @@ const List = () => {
       <div></div>
     </div>
   ) : (
-    <div className="container countries">
+    <div className="container-master">
       {countries.map((country, index) => (
         <Item country={country} key={index} />
       ))}

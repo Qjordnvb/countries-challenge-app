@@ -5,7 +5,7 @@ import SearchDropdown from "./search-dropdown";
 
 const Search = () => (
   <section>
-    <div className="container">
+    <div className="container-master">
       <SearchInput />
       <SearchDropdown />
     </div>

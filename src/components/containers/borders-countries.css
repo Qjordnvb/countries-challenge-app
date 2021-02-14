@@ -1,0 +1,29 @@
+.button-find-detail {
+  background-color: var(--background-el);
+  width: 4rem;
+  color: inherit;
+  border-radius: 0.4rem;
+  margin: 0rem 0rem 0.5rem 0.5rem;
+}
+
+.button-find-detail:focus {
+  outline: inherit;
+  color: inherit;
+}
+
+.information-text {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: 15rem;
+  padding-top: 2rem;
+}
+
+.modal-container {
+  padding: 3rem;
+}
+
+.information-text * p,
+strong {
+  text-align: justify;
+}

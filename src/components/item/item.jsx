@@ -1,6 +1,7 @@
 import React from "react";
-import "./item.css";
 import { Link } from "react-router-dom";
+// styles
+import "./item.css";
 
 const Item = ({ country }) => (
   <Link
