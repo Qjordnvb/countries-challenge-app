@@ -1,5 +1,7 @@
 import NotFound from "../components/not-found";
 
+// servicios para  llamada a la api
+
 export const findAllCountries = async () => {
   try {
     return (await fetch("https://restcountries.eu/rest/v2/all")).json();
