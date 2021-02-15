@@ -71,10 +71,6 @@ section .container-master {
   margin-bottom: 1rem;
 }
 
-.dropdown .fa-chevron-down {
-  margin-left: 0.8rem;
-}
-
 .dropdown ul {
   background-color: var(--background-el);
   position: absolute;
@@ -98,6 +94,8 @@ section .container-master {
 
 @media (min-width: 763px) {
   .dropdown {
+    display: flex;
+    justify-content: space-between;
     width: 12rem;
     cursor: pointer;
   }

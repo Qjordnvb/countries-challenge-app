@@ -5,62 +5,35 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { filterCountries } from "../../services/logic.service";
 
 const SearchDropdown = () => {
-  // State to manage the visibility of dropdown menu
+  // estado que maneja la visibilidad del dropdown
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
-  // Method to toggle the dropdown
+  // estado para obtener el valor de la region
+  const [selectedRegion, setSelectedRegion] = useState("Filter by region");
+
+  // Metodo para desplegar el dropdown
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
   };
 
+  // funcion para filtrar por region
+  const handleClick = (event) => {
+    filterCountries(event.target.innerText);
+    setSelectedRegion(event.target.innerText);
+  };
+
   return (
     <div className="dropdown" onClick={toggleDropdown}>
-      Filter by region
+      {selectedRegion === "All" ? "Filter by region" : selectedRegion}
       <FontAwesomeIcon className="fas fa-chevron-down" icon={faChevronDown} />
       {dropdownVisible && (
         <ul>
-          <li
-            onClick={(event) => {
-              filterCountries(event.target.innerText);
-            }}
-          >
-            All
-          </li>
-          <li
-            onClick={(event) => {
-              filterCountries(event.target.innerText);
-            }}
-          >
-            Africa
-          </li>
-          <li
-            onClick={(event) => {
-              filterCountries(event.target.innerText);
-            }}
-          >
-            America
-          </li>
-          <li
-            onClick={(event) => {
-              filterCountries(event.target.innerText);
-            }}
-          >
-            Asia
-          </li>
-          <li
-            onClick={(event) => {
-              filterCountries(event.target.innerText);
-            }}
-          >
-            Europe
-          </li>
-          <li
-            onClick={(event) => {
-              filterCountries(event.target.innerText);
-            }}
-          >
-            Oceania
-          </li>
+          <li onClick={handleClick}>All</li>
+          <li onClick={handleClick}>Africa</li>
+          <li onClick={handleClick}>America</li>
+          <li onClick={handleClick}>Asia</li>
+          <li onClick={handleClick}>Europe</li>
+          <li onClick={handleClick}>Oceania</li>
         </ul>
       )}
     </div>
