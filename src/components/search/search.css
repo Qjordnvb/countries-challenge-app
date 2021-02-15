@@ -108,7 +108,7 @@ section .container-master {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    max-width: 90rem;
+    max-width: 88rem;
     padding-top: 3rem;
   }
 }
