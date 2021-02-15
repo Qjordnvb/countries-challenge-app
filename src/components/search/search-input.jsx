@@ -5,10 +5,10 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { searchCountries } from "../../services/logic.service";
 
 const SearchInput = () => {
-  // State to manage the value of the input
+  // estado que maneja el input
   const [value, setvalue] = useState("");
 
-  // Method to set the value of the input
+  // metodo que da el valor del input
   const handleChangeValue = (value) => {
     setvalue(value);
     searchCountries(value);

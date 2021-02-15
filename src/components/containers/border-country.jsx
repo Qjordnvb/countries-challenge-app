@@ -11,10 +11,13 @@ import "./borders-countries.css";
 export const BorderCountry = (countryCode) => {
   const [country, setCountry] = useState({});
 
-  const [open, setOpen] = useState(false);
+  // estados del modal
 
+  const [open, setOpen] = useState(false);
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
+
+  // funcion para acceder al pais atra vez de su country code
 
   const findDetailCountry = async () => {
     try {
@@ -23,6 +26,7 @@ export const BorderCountry = (countryCode) => {
       return <NotFound />;
     }
   };
+
   return (
     <>
       <Modal open={open} onClose={onCloseModal} center>

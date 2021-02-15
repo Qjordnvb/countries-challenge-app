@@ -1,8 +1,10 @@
 import React from "react";
-import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// pages
 import Home from "./pages/home";
 import Details from "./pages/detail";
+// styles
+import "./App.css";
 
 const App = () => (
   <Router>
