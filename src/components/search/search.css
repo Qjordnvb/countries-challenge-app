@@ -57,6 +57,8 @@ section .container-master {
 
 /* Dropdown */
 .dropdown {
+  display: flex;
+  justify-content: space-between;
   width: 12rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -94,8 +96,6 @@ section .container-master {
 
 @media (min-width: 763px) {
   .dropdown {
-    display: flex;
-    justify-content: space-between;
     width: 12rem;
     cursor: pointer;
   }
